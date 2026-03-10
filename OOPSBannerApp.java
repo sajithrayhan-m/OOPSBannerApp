@@ -1,54 +1,57 @@
 public class OOPSBannerApp {
 
+    // Method for O
+    public static String[] getOPattern() {
+        return new String[] {
+            String.join("", "  ***  "),
+            String.join("", " *   * "),
+            String.join("", " *   * "),
+            String.join("", " *   * "),
+            String.join("", " *   * "),
+            String.join("", " *   * "),
+            String.join("", "  ***  ")
+        };
+    }
+
+    // Method for P
+    public static String[] getPPattern() {
+        return new String[] {
+            String.join("", " ****  "),
+            String.join("", " *   * "),
+            String.join("", " *   * "),
+            String.join("", " ****  "),
+            String.join("", " *     "),
+            String.join("", " *     "),
+            String.join("", " *     ")
+        };
+    }
+
+    // Method for S
+    public static String[] getSPattern() {
+        return new String[] {
+            String.join("", "  **** "),
+            String.join("", " *     "),
+            String.join("", " *     "),
+            String.join("", "  ***  "),
+            String.join("", "     * "),
+            String.join("", "     * "),
+            String.join("", " ****  ")
+        };
+    }
+
     public static void main(String[] args) {
 
-        System.out.println(String.join("  ",
-                " ***** ",
-                " ***** ",
-                " ******",
-                " ***** "
-        ));
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
-        System.out.println(String.join("  ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*      "
-        ));
-
-        System.out.println(String.join("  ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*      "
-        ));
-
-        System.out.println(String.join("  ",
-                "*     *",
-                "*     *",
-                "****** ",
-                " ***** "
-        ));
-
-        System.out.println(String.join("  ",
-                "*     *",
-                "*     *",
-                "*      ",
-                "      *"
-        ));
-
-        System.out.println(String.join("  ",
-                "*     *",
-                "*     *",
-                "*      ",
-                "*     *"
-        ));
-
-        System.out.println(String.join("  ",
-                " ***** ",
-                " ***** ",
-                "*      ",
-                " ***** "
-        ));
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(
+                oPattern[i] + "  " +
+                oPattern[i] + "  " +
+                pPattern[i] + "  " +
+                sPattern[i]
+            );
+        }
     }
 }
